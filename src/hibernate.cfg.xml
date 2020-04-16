@@ -25,7 +25,7 @@
 		<property name="current_session_context_class">thread</property>
 
 		<!-- To make the displayed SQL a bit nicer to read -->
-		<property name="format_sql">true</property>
+		<!-- <property name="format_sql">true</property> -->
 
 	</session-factory>
 

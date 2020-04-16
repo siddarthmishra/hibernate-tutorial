@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.luv2code.hibernate.demo.entity.Student;
 
-public class CreateStudentDemo {
+public class PrimaryKeyDemo {
 
 	public static void main(String[] args) {
 
@@ -21,22 +21,20 @@ public class CreateStudentDemo {
 		Transaction transaction = null;
 
 		try {
-			// create student object
-			System.out.println("Creating new Student Object...");
-			Student tempStudent = new Student("Sid", "Nikki", "sn@luv2code.com");
+			// create 3 student object
+			System.out.println("Creating 3 Student Object...");
+			Student tempStudent1 = new Student("Siddarth", "Mishra", "siddarth@luv2code.com");
+			Student tempStudent2 = new Student("Nikhita", "Sharma", "nikhita@luv2code.com");
 
 			// start a transaction
-			// session.beginTransaction();
-			// OR
 			transaction = session.beginTransaction();
 
 			// save the student object
 			System.out.println("Saving the student...");
-			session.save(tempStudent);
+			session.save(tempStudent1);
+			session.save(tempStudent2);
 
 			// commit transaction
-			// session.getTransaction().commit();
-			// OR
 			transaction.commit();
 
 			System.out.println("Done...");
